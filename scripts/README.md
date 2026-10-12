@@ -1,18 +1,22 @@
 # scripts
 
 Command-line utilities for working with the collection in this repository.
-No API keys are required and the only external dependency is `requests`.
+No API keys are required. Network-checking utilities use `requests`, and the
+README generator uses `PyYAML`.
 
 ## Installation
 
 ```bash
-python3 -m pip install requests
+python3 -m pip install -r requirements-dev.txt
 ```
 
 ## Scripts
 
 | Name | Purpose | Input | Output |
 |---|---|---|---|
+| `osint_bible.py` | Searches and exports tools, reports country coverage, and checks the data registry | Subcommand and options | Text, CSV, JSON or Markdown |
+| `validate_data.py` | Validates the tool/source schemas and country-file consistency; can probe registered links | Options | Validation report |
+| `build_readme.py` | Generates registry-backed company and regional source tables in README.md | `data/sources.yml` | Updated README or check result |
 | `link_checker.py` | Audits links in a Markdown file and classifies them as `OK`, `REDIRECT`, `BLOCKED`, `NO_RESPONSE` or `DEAD` | Markdown file | Summary on stdout; CSV optional |
 | `dork_builder.py` | Builds passive-reconnaissance search queries for one or more domains | One or more domains | Query text on stdout or to a file |
 | `username_check.py` | Checks whether a username route responds on supported platforms | One or more usernames | Table on stdout; CSV optional |
@@ -20,6 +24,9 @@ python3 -m pip install requests
 ## Usage
 
 ```bash
+python3 scripts/osint_bible.py stats
+python3 scripts/validate_data.py
+python3 scripts/build_readme.py --check
 python3 scripts/link_checker.py README.md audit/links-status.csv --all
 python3 scripts/dork_builder.py --domain example.com --output all
 python3 scripts/username_check.py torvalds --platforms github,keybase
