@@ -1,6 +1,6 @@
 ﻿# 🕵️‍♂️ OSINT Bible 2026
 > Compilation, procedures, tools and ethics for open source research
-[![Link health](https://img.shields.io/badge/links-543%2F729%20ok-brightgreen)](audit/latest.md)
+[![Link health](https://img.shields.io/badge/links-115%2F729%20ok-brightgreen)](audit/latest.md)
 [Command-line utilities](scripts/README.md) · [Link audit details](audit/latest.md)
 
 ## ⚠️ Ethical Disclaimer
@@ -374,7 +374,7 @@ graph TD
 19. **Reditr** - Link: [Reditr](http://reditr.com) - Description: Desktop Reddit client with a clean and intuitive interface.
 20. **Reeddit** - Link: [Reeddit](https://reedditapp.com) - Description: Simplified and clean Reddit web interface for a distraction-free browsing experience.
 21. **smat** - Link: [smat](https://www.smat-app.com/timeline) - Description: Social media analytics tool that includes Reddit for tracking trends and engagement.
-22. **socid_extractor** - Link: [socid_extractor](https://github.com/soxoj/socid_extractor) - Description: Extract user information from Reddit and other social media platforms.
+22. **socid_extractor** - Link: [socid_extractor](https://github.com/soxoj/socid-extractor) - Description: Extract user information from Reddit and other social media platforms.
 23. **Suggest me a subreddit** - Link: [Suggest me a subreddit](https://nikas.praninskas.com/suggest-subreddit) - Description: Get recommendations for new subreddits to explore based on your preferences.
 24. **Subreddits** - Link: [Subreddits](http://subreddits.org) - Description: Directory of active subreddits organized by various categories.
 25. **uforio** - Link: [uforio](http://uforio.com) - Description: Generate word clouds from Reddit comment threads.
@@ -450,7 +450,7 @@ The `--only-verified` flag filters only secrets confirmed active. Reduces false 
 **gitGraber** (continuous monitoring in cron):
 
 ```bash
-git clone https://github.com/hisxo/gitGraber.git
+git clone https://github.com/hisxo/gitGraber
 cd gitGraber
 
 # Configure config.py with GITHUB_TOKENS, WORDLIST, SLACK_WEBHOOK
@@ -1304,7 +1304,7 @@ masscan: ~5 seconds (less detail)
 
 **SpiderFoot setup:**
 ```bash
-git clone https://github.com/smicallef/spiderfoot.git
+git clone https://github.com/smicallef/spiderfoot
 cd spiderfoot
 pip3 install -r requirements.txt
 python3 sf.py -l 127.0.0.1:5001
@@ -1626,7 +1626,7 @@ port:4840                  # OPC UA
 | MCP Server | Wraps | URL |
 |---|---|---|
 | **Brave Search MCP** | Brave Search | https://github.com/brave/brave-search-mcp-server |
-| **Fetch MCP** | Web fetcher | https://github.com/modelcontextprotocol/servers/blob/main/src/fetch |
+| **Fetch MCP** | Web fetcher | https://github.com/modelcontextprotocol/servers/tree/main/src/fetch |
 | **SQLite MCP** | Local DB | https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite |
 
 ### 35.3 Agent Frameworks for OSINT Orchestration
@@ -1650,7 +1650,7 @@ port:4840                  # OPC UA
 ### 35.5 Quick Start (Claude Code)
 ```bash
 # 1. Clone the skills repo
-git clone https://github.com/frangelbarrera/osint-agent-skills.git
+git clone https://github.com/frangelbarrera/osint-agent-skills
 cd osint-agent-skills
 
 # 2. Add to .claude/settings.json
