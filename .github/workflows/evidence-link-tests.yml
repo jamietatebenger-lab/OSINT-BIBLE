@@ -34,4 +34,4 @@ jobs:
       - name: Compile source
         run: python -m py_compile scripts/link_checker.py tests/test_link_checker.py
       - name: Run network-free unit tests
-        run: python -m unittest discover -s tests -p "test_link_checker.py" -v
+        run: python -m unittest discover -s tests -p "test_*.py" -v
