@@ -191,6 +191,7 @@ def _check_links(urls: list[str], workers: int) -> list[dict]:
             r.close()
             status = ("DEAD" if code in DEAD else
                       "BLOCKED" if code in BLOCKED else
+                      "SERVER_ERROR" if isinstance(code, int) and 500 <= code <= 599 else
                       "REDIRECT" if final.rstrip("/") != u.rstrip("/") else "OK")
             return {"url": u, "status": status, "http": code, "final": final}
         except Exception as exc:  # noqa: BLE001
@@ -243,7 +244,7 @@ def main() -> int:
         report["links"] = results
         print("\nLink status: " + "  ".join(f"{k}={v}" for k, v in sorted(counts.items())))
         for r in results:
-            if r["status"] in {"DEAD", "NO_RESPONSE"}:
+            if r["status"] in {"DEAD", "NO_RESPONSE", "SERVER_ERROR"}:
                 print(f"  {r['status']:<12} {r['url']}")
         if counts.get("DEAD"):
             print("\nFAILED: dead links present")

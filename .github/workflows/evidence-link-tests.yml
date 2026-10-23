@@ -1,0 +1,42 @@
+name: Evidence link checker unit tests
+
+on:
+  pull_request:
+    paths:
+      - "scripts/link_checker.py"
+      - "scripts/validate_data.py"
+      - "data/tools.json"
+      - "tests/test_link_checker.py"
+      - "tests/test_validate_data_link_status.py"
+      - ".github/workflows/evidence-link-tests.yml"
+  push:
+    branches:
+      - "main"
+    paths:
+      - "scripts/link_checker.py"
+      - "scripts/validate_data.py"
+      - "data/tools.json"
+      - "tests/test_link_checker.py"
+      - "tests/test_validate_data_link_status.py"
+      - ".github/workflows/evidence-link-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-http-classification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependency
+        run: python -m pip install requests
+      - name: Compile source
+        run: python -m py_compile scripts/link_checker.py tests/test_link_checker.py
+      - name: Run network-free unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v

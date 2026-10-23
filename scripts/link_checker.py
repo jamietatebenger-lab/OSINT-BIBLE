@@ -14,9 +14,10 @@ Classification
 --------------
   DEAD         404, 410, 451
   BLOCKED      400, 401, 403, 406, 412, 429, 444   WAF, geo-restriction or login wall
+  SERVER_ERROR  500-599   origin/server error; retry or inspect later
   REDIRECT     the URL redirects elsewhere; update it to the canonical form
   NO_RESPONSE  timeout, DNS failure or connection refused
-  OK           any other status code
+  OK           other HTTP response; this does not authenticate linked content
 
 Output
 ------
@@ -66,9 +67,9 @@ HEADERS = {
 }
 DEAD = {404, 410, 451}
 BLOCKED = {400, 401, 403, 406, 412, 429, 444}
-HEAD_RETRY = BLOCKED | DEAD | {405, 501}
+HEAD_RETRY = BLOCKED | DEAD | {405} | set(range(500, 600))
 FIELDS = ["url", "status", "http", "final_url", "source_line", "note"]
-ORDER = ("OK", "REDIRECT", "BLOCKED", "NO_RESPONSE", "DEAD")
+ORDER = ("OK", "REDIRECT", "BLOCKED", "SERVER_ERROR", "NO_RESPONSE", "DEAD")
 TIMEOUT = 15
 
 def extract_urls(path):
@@ -109,6 +110,8 @@ def classify(url, method="get"):
         return [url, "DEAD", code, final, "link is down: replace or remove"]
     if isinstance(code, int) and code in BLOCKED:
         return [url, "BLOCKED", code, final, "WAF, geo-restriction or login wall: check in a browser"]
+    if isinstance(code, int) and 500 <= code <= 599:
+        return [url, "SERVER_ERROR", code, final, "server returned 5xx: retry later; do not mark as verified"]
     if final.rstrip("/") != url.rstrip("/"):
         return [url, "REDIRECT", code, final, "update to the canonical URL"]
     return [url, "OK", code, final, ""]
