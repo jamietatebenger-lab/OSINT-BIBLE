@@ -4,15 +4,20 @@ on:
   pull_request:
     paths:
       - "scripts/link_checker.py"
+      - "scripts/validate_data.py"
+      - "data/tools.json"
       - "tests/test_link_checker.py"
+      - "tests/test_validate_data_link_status.py"
       - ".github/workflows/evidence-link-tests.yml"
   push:
     branches:
       - "main"
-      - "repair/stop-false-ok-server-errors-2026-10-23"
     paths:
       - "scripts/link_checker.py"
+      - "scripts/validate_data.py"
+      - "data/tools.json"
       - "tests/test_link_checker.py"
+      - "tests/test_validate_data_link_status.py"
       - ".github/workflows/evidence-link-tests.yml"
   workflow_dispatch:
 
