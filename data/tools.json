@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_verified": "2026-09-30",
+  "last_verified": "2026-10-24",
   "tools": [
     {
       "id": "osint-framework",
@@ -721,6 +721,65 @@
       "status": "verified",
       "verified_on": "2026-09-30",
       "description": "Reference metadata reader/writer for images, video and documents.",
+      "region": "GLOBAL"
+    },
+    {
+      "id": "google-lens",
+      "name": "Google Lens",
+      "url": "https://lens.google/",
+      "category": "image-verification",
+      "type": "web",
+      "license": "free",
+      "cost": "free",
+      "opensource": false,
+      "purpose": "Searches for visually similar images and matches on the public web.",
+      "tags": [
+        "reverse-image-search",
+        "image-verification"
+      ],
+      "status": "verified",
+      "verified_on": "2026-10-24",
+      "description": "Visual search service for finding related images and pages.",
+      "region": "GLOBAL",
+      "ethics_note": "Use public reference images; do not upload private guest photos without informed authorization."
+    },
+    {
+      "id": "tineye",
+      "name": "TinEye",
+      "url": "https://tineye.com/",
+      "category": "image-verification",
+      "type": "web",
+      "license": "free",
+      "cost": "free",
+      "opensource": false,
+      "purpose": "Finds where an image appears online and visually modified versions.",
+      "tags": [
+        "reverse-image-search",
+        "image-verification"
+      ],
+      "status": "verified",
+      "verified_on": "2026-10-24",
+      "description": "Reverse image search for tracing appearances of an image on the web.",
+      "region": "GLOBAL",
+      "ethics_note": "Use public reference images; do not upload private guest photos without informed authorization."
+    },
+    {
+      "id": "wayback-machine",
+      "name": "Internet Archive Wayback Machine",
+      "url": "https://web.archive.org/",
+      "category": "archives",
+      "type": "web",
+      "license": "free",
+      "cost": "free",
+      "opensource": false,
+      "purpose": "Browse archived snapshots of publicly available web pages.",
+      "tags": [
+        "web-archives",
+        "historical-research"
+      ],
+      "status": "verified",
+      "verified_on": "2026-10-24",
+      "description": "Historical captures can help compare changes to public property listings.",
       "region": "GLOBAL"
     },
     {

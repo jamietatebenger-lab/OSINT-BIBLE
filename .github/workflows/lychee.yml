@@ -6,12 +6,14 @@ on:
     paths:
       - 'README.md'
       - 'countries/**/*.md'
+      - 'tasks/**/*.md'
       - 'lychee.toml'
   pull_request:
     branches: [main]
     paths:
       - 'README.md'
       - 'countries/**/*.md'
+      - 'tasks/**/*.md'
       - 'lychee.toml'
   schedule:
     - cron: "0 3 * * 1"
@@ -34,7 +36,7 @@ jobs:
           args: >
             --config ./lychee.toml
             --no-progress
-            README.md countries/*.md
+            README.md countries/*.md tasks/*.md
           fail: ${{ github.event_name == 'pull_request' }}
           jobSummary: true
           format: markdown
@@ -45,7 +47,7 @@ jobs:
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: Broken links found in README
+          title: Broken links found in repository documentation
           content-filepath: ./lychee/report.md
           labels: |
             broken-links

@@ -25,7 +25,11 @@ jobs:
       - name: Validate schema and content
         run: python3 scripts/validate_data.py
       - name: Probe a sample of URLs
+        if: github.event_name != 'schedule'
         run: python3 scripts/validate_data.py --check-links --limit 20
+      - name: Audit all tool and source URLs
+        if: github.event_name == 'schedule'
+        run: python3 scripts/validate_data.py --check-links --limit 0
 
   link-check:
     name: Link health (lychee)
