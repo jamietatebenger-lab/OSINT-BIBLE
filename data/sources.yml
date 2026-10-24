@@ -278,11 +278,11 @@ sources:
     url: https://www.opensanctions.org/
     category: company
     region: Global
-    purpose: Consolidates sanctions lists, PEPs and company data for screening; free bulk data and API.
+    purpose: Consolidates sanctions lists, PEPs and company data; bulk data is CC BY-NC 4.0, free for non-commercial use, and commercial use requires a separate license.
     cost: freemium
     language: [en]
     tags: [sanctions, pep, screening, api]
-    verified: "2026-09-30"
+    verified: "2026-10-24"
     status: ok
     readme_section: sources:company
 

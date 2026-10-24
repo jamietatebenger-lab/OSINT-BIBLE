@@ -178,16 +178,17 @@
       "url": "https://www.opensanctions.org/",
       "category": "sanctions-ubo",
       "type": "dataset",
-      "license": "open-source",
-      "cost": "free",
-      "opensource": true,
-      "purpose": "Consolidated sanctions, PEP and watchlist data; bulk download available.",
+      "license": "freemium",
+      "cost": "freemium",
+      "opensource": false,
+      "purpose": "Consolidated sanctions, PEP and watchlist data; commercial use requires a separate license.",
       "tags": [
         "sanctions",
         "pep"
       ],
       "status": "verified",
-      "verified_on": "2026-09-30",
+      "verified_on": "2026-10-24",
+      "description": "Bulk datasets are licensed CC BY-NC 4.0; free for non-commercial use, with commercial use requiring a separate license.",
       "region": "GLOBAL"
     },
     {
@@ -1006,6 +1007,28 @@
       "description": "Curated list of Model Context Protocol servers for OSINT.",
       "region": "GLOBAL",
       "readme_section": "35-ai-agent-skills-mcp"
+    },
+    {
+      "id": "mcp-registry",
+      "name": "Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "docs_url": "https://registry.modelcontextprotocol.io/docs",
+      "repo_url": "https://github.com/modelcontextprotocol/registry",
+      "category": "mcp",
+      "type": "registry",
+      "license": "open-source",
+      "cost": "free",
+      "opensource": true,
+      "purpose": "Official public catalog and API for discovering and publishing Model Context Protocol servers.",
+      "tags": [
+        "mcp",
+        "directory"
+      ],
+      "official": true,
+      "status": "verified",
+      "verified_on": "2026-10-24",
+      "description": "First-party MCP server registry backed by a public API.",
+      "region": "GLOBAL"
     },
     {
       "id": "osint-tools-mcp-server",

@@ -1515,7 +1515,7 @@ site:*.*.target.com
 | [OCCRP Aleph](https://aleph.occrp.org/) | Searchable archive of company registries, leaks and court records across jurisdictions. | freemium | 2026-09-30 |
 | [OFAC Sanctions List Search (US Treasury)](https://sanctionssearch.ofac.treas.gov/) | Official US OFAC SDN and consolidated sanctions screening tool. | free | 2026-09-30 |
 | [OpenOwnership](https://openownership.org/) | Global beneficial-ownership data standard and register directory. | free | 2026-09-30 |
-| [OpenSanctions](https://www.opensanctions.org/) | Consolidates sanctions lists, PEPs and company data for screening; free bulk data and API. | freemium | 2026-09-30 |
+| [OpenSanctions](https://www.opensanctions.org/) | Consolidates sanctions lists, PEPs and company data; bulk data is CC BY-NC 4.0, free for non-commercial use, and commercial use requires a separate license. | freemium | 2026-10-24 |
 | [Registro de Empresas y Sociedades (Chile)](https://www.registrodeempresasysociedades.cl/) | Chilean public company registry created under the "Empresa en un Día" regime. | free | 2026-09-30 |
 | [RUES (Colombia)](https://www.rues.org.co/) | Single Business Register of Colombia — free company and legal-representative search. | free | 2026-09-30 |
 | [SUNARP (Peru)](https://www.sunarp.gob.pe/) | Peruvian national registry of companies, property and legal entities. | freemium | 2026-09-30 |
@@ -1643,6 +1643,7 @@ port:4840                  # OPC UA
 | Resource | Type | URL |
 |---|---|---|
 | **osint-agent-skills** (author's) | 22 MCP tools + 295-line system prompt + 9 pivot playbooks | https://github.com/frangelbarrera/osint-agent-skills |
+| **Official MCP Registry** | First-party MCP server catalog and API | https://registry.modelcontextprotocol.io/ |
 | **PulseMCP** | MCP server directory | https://www.pulsemcp.com |
 | **MCP Server Finder (Glama)** | Directory | https://glama.ai/mcp/servers |
 | **awesome-mcp-servers** | Curated list | https://github.com/punkpeye/awesome-mcp-servers |
@@ -1652,7 +1653,8 @@ port:4840                  # OPC UA
 |---|---|---|
 | **Brave Search MCP** | Brave Search | https://github.com/brave/brave-search-mcp-server |
 | **Fetch MCP** | Web fetcher | https://github.com/modelcontextprotocol/servers/blob/main/src/fetch |
-| **SQLite MCP** | Local DB | https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite |
+
+> The [SQLite MCP implementation](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite) is archived and no longer maintained; its maintainers provide no security updates or bug fixes. Do not use it in production.
 
 ### 35.3 Agent Frameworks for OSINT Orchestration
 | Framework | Language | URL | Highlight |
