@@ -356,7 +356,7 @@
     {
       "id": "blackbird",
       "name": "Blackbird",
-      "url": "https://github.com/p1ngul1n0/blackbird",
+      "url": "https://github.com/antoniaci/blackbird",
       "category": "username",
       "type": "cli",
       "license": "open-source",
@@ -368,8 +368,8 @@
         "email"
       ],
       "status": "verified",
-      "verified_on": "2026-09-30",
-      "description": "OSINT tool that searches accounts by username or email with a web UI.",
+      "verified_on": "2026-10-24",
+      "description": "CLI for searching usernames and email addresses across platforms with PDF and CSV exports.",
       "region": "GLOBAL"
     },
     {

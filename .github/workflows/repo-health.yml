@@ -35,6 +35,8 @@ jobs:
           pip install -r requirements-dev.txt
       - name: Validate schema and content
         run: python3 scripts/validate_data.py
+      - name: Check generated README tables
+        run: python3 scripts/build_readme.py --check
       - name: Probe a sample of URLs
         run: python3 scripts/validate_data.py --check-links --limit 20
 

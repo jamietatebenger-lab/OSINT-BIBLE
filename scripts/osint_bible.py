@@ -165,20 +165,37 @@ def cmd_check(args):
     if args.limit:
         urls = urls[: args.limit]
     ua = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/126.0 Safari/537.36"}
+    dead_codes = {404, 410, 451}
+    blocked_codes = {400, 401, 403, 406, 412, 429, 444}
 
     def probe(u):
         try:
-            r = requests.get(u, headers=ua, timeout=25, allow_redirects=True)
-            return (u, r.status_code)
-        except Exception:
-            return (u, None)
+            r = requests.get(u, headers=ua, timeout=25, allow_redirects=True,
+                             stream=True)
+            code, final = r.status_code, r.url
+            r.close()
+            status = ("DEAD" if code in dead_codes else
+                      "BLOCKED" if code in blocked_codes else
+                      "SERVER_ERROR" if 500 <= code <= 599 else
+                      "REDIRECT" if final.rstrip("/") != u.rstrip("/") else "OK")
+            return (u, status, code, final, "")
+        except requests.RequestException as exc:
+            return (u, "NO_RESPONSE", None, "", type(exc).__name__)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as ex:
         rows = list(ex.map(probe, urls))
-    dead = [u for u, c in rows if c in (404, 410, 451)]
-    print(f"checked {len(rows)} urls; {len(dead)} dead")
-    for u in dead:
-        print("  DEAD", u)
+    counts = Counter(row[1] for row in rows)
+    print(f"checked {len(rows)} urls")
+    for status in ("OK", "REDIRECT", "BLOCKED", "SERVER_ERROR",
+                   "NO_RESPONSE", "DEAD"):
+        print(f"{status:<13}{counts.get(status, 0):>5}")
+    for url, status, code, final, note in rows:
+        if status != "OK":
+            suffix = f" -> {final}" if final and final != url else ""
+            if note:
+                suffix += f" ({note})"
+            print(f"  {status:<12}{str(code or ''):<6}{url}{suffix}")
+    dead = counts.get("DEAD", 0)
     return 1 if dead and args.strict else 0
 
 
