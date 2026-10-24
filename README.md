@@ -1501,6 +1501,32 @@ site:*.*.target.com
 ### Additional Company Registries
 
 <!-- AUTOGEN:sources:company:START -->
+| Source | Purpose | Access | Verified |
+|---|---|---|---|
+| [Bayanat — UAE Open Data](https://bayanat.ae/) | UAE national open data platform with company, demographic and economic datasets. | free | 2026-09-30 |
+| [Bolagsverket (Sweden)](https://www.bolagsverket.se/) | Swedish Companies Registration Office — annual reports, filings and registry data. | freemium | 2026-09-30 |
+| [Brønnøysund Register Centre (Norway)](https://www.brreg.no/) | Norwegian business registry with free open datasets and API. | free | 2026-09-30 |
+| [CIPC (South Africa)](https://www.cipc.co.za/) | Companies and Intellectual Property Commission — company and IP registry searches. | registration | 2026-09-30 |
+| [CORE — Companies Registration Office (Ireland)](https://core.cro.ie/) | Irish company and business-name search, filings and annual returns. | freemium | 2026-09-30 |
+| [Corporate Affairs Commission (Nigeria)](https://www.cac.gov.ng/) | Nigerian company registry, post-incorporation filings and name search. | registration | 2026-09-30 |
+| [CVR — Det Centrale Virksomhedsregister (Denmark)](https://datacvr.virk.dk/) | Danish central business register with free API and open datasets. | free | 2026-09-30 |
+| [e-Business Register (Estonia)](https://www.rik.ee/) | Estonian business register and beneficial-owner data, highly digitised. | freemium | 2026-09-30 |
+| [GLEIF — Legal Entity Identifier search](https://www.gleif.org/) | Global LEI registry linking legal entities, parents and subsidiaries across jurisdictions. | free | 2026-09-30 |
+| [JustizOnline Firmenbuch (Austria)](https://justizonline.gv.at/) | Austrian commercial register (Firmenbuch) and justice services portal. | freemium | 2026-09-30 |
+| [KBO/BCE Public Search (Belgium)](https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html) | Belgian Crossroads Bank for Enterprises — free public company search by number. | free | 2026-09-30 |
+| [KVK Handelsregister (Netherlands)](https://www.kvk.nl/en/search/) | Dutch Business Register search by company name, KVK number or keyword. | free | 2026-09-30 |
+| [MCA Company/LLP Name Search (India)](https://www.mca.gov.in/content/mca/global/en/mca/fo-llp-services/company-llp-name-search.html) | Official name search for companies and LLPs registered in India. | free | 2026-09-30 |
+| [MCA Corporate Data Management (India)](https://mcacdm.nic.in/) | Company statistics and corporate master data published by India's Ministry of Corporate Affairs. | free | 2026-09-30 |
+| [OCCRP "ID" — research database catalogue](https://id.occrp.org/databases/) | Catalogue of national company, land and court databases with access notes per country. | free | 2026-09-30 |
+| [OCCRP Aleph](https://aleph.occrp.org/) | Searchable archive of company registries, leaks and court records across jurisdictions. | freemium | 2026-09-30 |
+| [OFAC Sanctions List Search (US Treasury)](https://sanctionssearch.ofac.treas.gov/) | Official US OFAC SDN and consolidated sanctions screening tool. | free | 2026-09-30 |
+| [OpenOwnership](https://openownership.org/) | Global beneficial-ownership data standard and register directory. | free | 2026-09-30 |
+| [OpenSanctions](https://www.opensanctions.org/) | Consolidates sanctions lists, PEPs and company data for screening; free bulk data and API. | freemium | 2026-09-30 |
+| [Registro de Empresas y Sociedades (Chile)](https://www.registrodeempresasysociedades.cl/) | Chilean public company registry created under the "Empresa en un Día" regime. | free | 2026-09-30 |
+| [RUES (Colombia)](https://www.rues.org.co/) | Single Business Register of Colombia — free company and legal-representative search. | free | 2026-09-30 |
+| [SUNARP (Peru)](https://www.sunarp.gob.pe/) | Peruvian national registry of companies, property and legal entities. | freemium | 2026-09-30 |
+| [Virre Business Information System (Finland)](https://virre.prh.fi/) | Finnish Trade Register and Beneficial Owner Register lookups. | freemium | 2026-09-30 |
+| [Zefix (Switzerland)](https://www.zefix.ch/) | Central Swiss commercial-register index — company search and register extracts. | freemium | 2026-09-30 |
 <!-- AUTOGEN:sources:company:END -->
 
 ---
@@ -2311,6 +2337,17 @@ The country research is organized as individual Markdown files in [`countries/`]
 ### Regional Research Directories and Open-Data Portals
 
 <!-- AUTOGEN:sources:regional:START -->
+| Source | Purpose | Access | Verified |
+|---|---|---|---|
+| [Bellingcat Online Investigation Toolkit](https://bellingcat.gitbook.io/toolkit) | Curated, community-maintained catalogue of verification and geolocation tools. | free | 2026-09-30 |
+| [data.europa.eu — EU Open Data Portal](https://data.europa.eu/en) | Official single access point for European open datasets and country portals. | free | 2026-09-30 |
+| [Digital Digging — OSINT Resources by Country v2.0](https://digitaldigging.org/osint/) | Country-indexed OSINT links covering databases, properties, vehicles and people search. | free | 2026-09-30 |
+| [GIJN — Open Source Databases by Country](https://gijn.org/resource/open-source-databases-country/) | Country-by-country directory of open data portals, company registries and court records. | free | 2026-09-30 |
+| [OSINT for countries (methodology hub)](https://github.com/wddadk/OSINT-for-countries) | Methodology and links template for building per-country OSINT collections. | free | 2026-09-30 |
+| [OSINT in Egypt (community collection)](https://github.com/OSINT-for-countries/OSINT_in_Egypt) | Community-maintained Egypt-specific registry, legal and open-source resource list. | free | 2026-09-30 |
+| [OSINT Tools — Emirates](https://github.com/paulpogoda/OSINT-Tools-Emirates) | Curated UAE (Abu Dhabi, Dubai, Sharjah) OSINT tools and registry links. | free | 2026-09-30 |
+| [Registry of Open Data on AWS](https://registry.opendata.aws/) | Index of large open datasets (satellite, climate, geospatial) queryable in the cloud. | free | 2026-09-30 |
+| [UNISHKA OSINT World Series](https://unishka.com/resources/) | Country-specific OSINT toolkits compiling portals, registries and people-search tools. | free | 2026-09-30 |
 <!-- AUTOGEN:sources:regional:END -->
 
 ### Country research standards
