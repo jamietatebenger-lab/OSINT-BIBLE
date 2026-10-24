@@ -1498,6 +1498,11 @@ site:*.*.target.com
 | **Company House** | UK company registry | https://find-and-update.company-information.service.gov.uk |
 | **Bloomberg** | Financial data | https://www.bloomberg.com |
 
+### Additional Company Registries
+
+<!-- AUTOGEN:sources:company:START -->
+<!-- AUTOGEN:sources:company:END -->
+
 ---
 
 ## 33. Threat Intelligence Feeds
@@ -2302,6 +2307,11 @@ The country research is organized as individual Markdown files in [`countries/`]
 | Asia-Pacific | [China](./countries/china.md), [Korea (North & South)](./countries/korea-north-and-south.md), [Japan](./countries/japan.md) | [`countries/`](./countries/) |
 | Middle East | [Israel](./countries/israel.md), [Iran](./countries/iran.md), [Saudi Arabia](./countries/saudi-arabia.md), [Turkey](./countries/turkey.md) | [`countries/`](./countries/) |
 | Oceania | [Australia](./countries/australia.md) | [`countries/`](./countries/) |
+
+### Regional Research Directories and Open-Data Portals
+
+<!-- AUTOGEN:sources:regional:START -->
+<!-- AUTOGEN:sources:regional:END -->
 
 ### Country research standards
 
