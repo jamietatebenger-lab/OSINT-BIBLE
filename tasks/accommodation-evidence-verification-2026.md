@@ -15,19 +15,6 @@
 - [ ] Produce a redacted evidence matrix including provenance, contradictions, confidence ratings and unresolved questions.
 - [ ] Perform a privacy and evidentiary review before sharing findings externally.
 
-## Tools
-
-| Check | Suitable tools and sources | Use limits |
-| --- | --- | --- |
-| Preserve and hash files | Local `sha256sum`, `shasum -a 256` or PowerShell `Get-FileHash`; an offline evidence manifest | Keep originals and hashes in restricted storage; do not upload evidence to public hash or file-analysis services. |
-| Inspect metadata | [ExifTool](https://exiftool.org/) | Work on copies; metadata can be missing, altered or misleading and is not proof of capture time. |
-| Compare room images | [Google Lens](https://lens.google/) and [TinEye](https://tineye.com/) | Search publicly published reference images only. Do not upload private guest photos to third-party services without informed authorization. A visual match alone does not establish a stay. |
-| Check historical property claims | [Internet Archive Wayback Machine](https://web.archive.org/) and the property's official site or relevant tourism authority | Record the exact URL and capture date; an archived page proves only what that page displayed, not that the claim was true. |
-| Authenticate correspondence | The booking holder's own email or booking account, with their authorization | Preserve original messages and available headers; do not access another person's account or use credential-recovery or breach-search tools. |
-| Prepare findings | An offline spreadsheet or text editor | Redact copies, remove identifying metadata and review the exported report before sharing. |
-
-Do not use face recognition, people-search, guest-register, breach-data, or tracking tools for this task. Tool availability does not expand the lawful-custodian and privacy boundaries above.
-
 ## Boundaries
 No collection of confidential guest registers, private bookings, third-party email/accounts, payment details, medical data, phone tracking or credential materials. A publicly advertised room capacity or forwarded message does not prove who attended a stay.
 
